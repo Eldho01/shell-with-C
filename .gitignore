@@ -1,0 +1,2 @@
+# exclude output files and binaries
+build/

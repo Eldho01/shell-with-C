@@ -4,6 +4,8 @@
 #include <unistd.h>
 #include <sys/wait.h>
 
+#include "../builtins/builtins.h"
+
 #define MAX_INPUT 512
 #define MAX_ARGS 32
 
@@ -40,7 +42,16 @@ int main() {
 
         parse_input(input, args);
 
-        pid_t pid = fork();
+        if (args[0] == NULL) continue;  // Skip empty input
+
+        if (is_builtin(args[0])) {
+          if (execute_builtin(args) == 1) {
+            printf("Exiting shell...\n");
+            break;
+          }
+          continue;
+        }
+      pid_t pid = fork();
         if (pid == 0) {
             // Child process
             if (execvp(args[0], args) == -1) {
@@ -52,7 +63,7 @@ int main() {
             wait(NULL);
         } else {
             perror("fork failed");
-        }
+         }
     }
 
     return 0;
