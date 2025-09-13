@@ -7,13 +7,13 @@ This is a hobby project, where I'm trying to learn the working of a shell with t
 ## shell
 
 + Shell is a Command-Line-Interface (**CLI**) that allow users to Interact with Operating system.
-+ It is a Interpreter which read from CLI or files and converter Human readable commands to system calls which OS understands.
++ It is a Interpreter which read from CLI or files and convert Human readable commands to system calls which OS understands.
 
 ## Features of Shell
 
 1. The shell basically parse the User input into Commands and Arguments.
 2. Can execute programs by forking a new process.
-3. Pinpelineing or chaining commands using **|** operator, this allow user to use output of one 
+3. Pipelineing or chaining commands using  ' **|** 'operator, this allow user to use output of one 
   commands as input of the next.(eg. ls /usr| grep lib)
 4. Scriptting is the most useful feature of shell. This allow user to automate tasks and excecute from files.(by running **.sh** scripts)
 
