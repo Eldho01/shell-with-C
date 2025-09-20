@@ -11,7 +11,8 @@ include_directories(${CMAKE_SOURCE_DIR}/builtins)
 set(
   SOURCES
   src/shell.c
-  builtins/cd.c)
+  builtins/cd.c
+  builtins/builtins.c)
 
 # executables
 add_executable(shell ${SOURCES})

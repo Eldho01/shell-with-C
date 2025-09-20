@@ -6,7 +6,7 @@
 
 #include "../builtins/builtins.h"
 
-#define MAX_INPUT 512
+#define MAX_SHELL_INPUT 512
 #define MAX_ARGS 32
 
 void parse_input(char *input, char **args) {
@@ -20,14 +20,14 @@ void parse_input(char *input, char **args) {
 }
 
 int main() {
-    char input[MAX_INPUT];
+    char input[MAX_SHELL_INPUT];
     char *args[MAX_ARGS];
 
     while (1) {
         printf("$ -> ");
         fflush(stdout);
 
-        if (fgets(input, MAX_INPUT, stdin) == NULL) {
+        if (fgets(input, MAX_SHELL_INPUT, stdin) == NULL) {
             perror("fgets failed");
             continue;
         }

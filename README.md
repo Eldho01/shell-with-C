@@ -2,7 +2,7 @@
 
 This is a hobby project, where I'm trying to learn the working of a shell with the help of C language.
 
-> **Note**: General concepts about shell are described below. Project Sepcific Details are documented in [src/README.md](src/README.md)
+> **Note**: General concepts about shell are described below. Project Sepcific Details are documented in [Readme.md](src/Readme.md)
 
 ## shell
 

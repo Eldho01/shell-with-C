@@ -25,9 +25,19 @@
 #ifndef BUILTINS_H
 #define BUILTINS_H
 
+#include <stdio.h>
+#include <unistd.h>
+#include <string.h>
+#include <stdlib.h>
+#include <limits.h>
+
+/* this funcitions defined on cd.c source file */
 int handle_cd(char **args);
 int handle_pwd();
 
+/* The funcitions to check if the command parsed is builtin or not  
+ * adn execute if its one
+ */
 int is_builtin(char *cmd);
 int execute_builtin(char **args);
 
